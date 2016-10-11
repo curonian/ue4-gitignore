@@ -1,0 +1,37 @@
+Install git client
+Install git-lfs client
+
+sample .gitconfig
+
+```
+[user]
+	name = <<<<<   You Name   >>>>>
+	email = <<<<<   you@email  >>>>>
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	required = true
+	clean = git-lfs clean -- %f
+[color]
+        ui = auto
+[color "status"]
+        header = white
+[filter "media"]
+        clean = git-media-clean %f
+        smudge = git-media-smudge %f
+[alias]
+    a = add
+    aa = add --all
+    c = commit
+    cm = commit --message
+    co = checkout
+    clear = checkout -- .
+    h = help
+    l = "!git log --graph --pretty='tformat:%C(yellow)%h{%C(green)%ar{%C(bold blue)%an{%C(red)%d%C(reset) %s' $* | column -t -s '{' | less -FXRS"
+    lg = log --graph --pretty=format:'%Cred%h%Creset %an -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+    ls-ignored = ls-files --exclude-standard --ignored --others
+    news = log -p HEAD@{1}..HEAD@{0}
+    s = status --short
+    sl = shortlog
+    st = status
+    undo = reset --hard HEAD^
+```

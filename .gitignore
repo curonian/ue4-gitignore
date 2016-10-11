@@ -11,6 +11,9 @@
 # Do not ignore source and config dirs
 !/Source/**
 !/Config/**
+!/Import/**
+!/Models/**
+!/Textures/**
 
 # Only allow .uasset and .umap files from /Content 
 # They're tracked by git-lfs, don't forget to track other

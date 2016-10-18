@@ -1,9 +1,3 @@
-Install git client
-Install git-lfs client
-
-sample .gitconfig
-
-```
 [user]
 	name = <<<<<   You Name   >>>>>
 	email = <<<<<   you@email  >>>>>
@@ -34,4 +28,3 @@ sample .gitconfig
     sl = shortlog
     st = status
     undo = reset --hard HEAD^
-```
